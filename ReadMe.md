@@ -58,11 +58,11 @@ After it,
 > **Step-4:** Now Let's write `test cases`. So create ` A Class`. 
 ```
 So Package Name:com.ecom.webapp.test 
-Class Name : GoogleHomePageTest
+Class Name : GoogleHomePageTest.java
 And Check the Main Method.
 ```
 
->**Step-5:** Write The code for the `Class: FirstTestCase` .
+>**Step-5:** Write The code for the `Class:GoogleHomePageTest.java ` .
 
 ```
 //FirstTest: Is For Google Home Page Test. 
