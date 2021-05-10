@@ -52,7 +52,7 @@ Project Name: SeleniumChromeDriverTestOne
 
 After it,
 
- Right click on the `project name` -> ` Click on `Build Path`  ->  `Configure Build Path` -> Click on  `Libraries`  ->  `Add Jars` -> Then Add all the `.jar files inside lib folder` -> `click ok` -> `Click on Apply and Close` .
+ Right click on the `project name` -> ` Click on `Build Path`  ->  `Configure Build Path` -> Click on  `Libraries`  ->  Click on  `Class Path` -> `Add Jars` -> Then Add all the `.jar files inside lib folder` -> `click ok` -> `Click on Apply and Close` .
 
 
 > **Step-4:** Now Let's write `test cases`. So create ` A Class`. 
@@ -83,7 +83,7 @@ And Check the Main Method.
 
 
 ```
-Error Message:
+# Error-1 Message:
 
 ```
 Exception in thread "main" java.lang.Error: Unresolved compilation problems: 
@@ -92,3 +92,10 @@ Exception in thread "main" java.lang.Error: Unresolved compilation problems:
 
 	at com.ecom.webapp.test.GoogleHomePageTest.main(GoogleHomePageTest.java:25)
 ```
+# Error-1: Resolved 
+
+> Choose `Classpath` to add .jar files , while doing configuration 
+build path. 
+
+
+<img src="img/webdriver-error-message-1.jpg">
