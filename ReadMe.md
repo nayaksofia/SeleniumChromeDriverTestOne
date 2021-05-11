@@ -17,11 +17,14 @@ Tools : Eclipse
 
 # Steps To Follow: 
 
-> Step-1: Check the current version of `Chrome Browser. 
+> Step-1: Check the current version of `Chrome Browser`. 
+
+> My Chrome Browser Version Is: Version 90.0.4430.93 (Official Build) (64-bit)
 
 > Step-2: Download `chrome driver ` according to the version of your chrome browser. 
 [Chrome Driver Link](https://chromedriver.chromium.org/downloads)
-Here, you will get different options of ChromeDriver based on your operating system. Additionally, for the Windows operating system, you can `choose the Win32 version` as marked in the below image. Yes, `even if you have a 64-bit Windows installed on your system`, **the Win32 version will work fine**.
+
+> Here, you will get different options of ChromeDriver based on your operating system. Additionally, for the Windows operating system, you can `choose the Win32 version`. Yes, `even if you have a 64-bit Windows installed on your system`, **the Win32 version will work fine**.
 
 > Step-3: Download Selenium Standalone Server.jar from the official site:  [Click Here To Download .jar File For Java](https://www.selenium.dev/downloads/)
 
@@ -33,7 +36,7 @@ Here, you will get different options of ChromeDriver based on your operating sys
 
 # Configure Selenium WebDriver With Eclipse:
 
-> Step-9: Launch Eclipse And Create A WorkSpace ?
+> Step-9: Launch Eclipse And Create A WorkSpace. 
 
 > My Current Workspace Name: ` FSD-5 Workspace-Practice-Projects `
 
@@ -67,19 +70,38 @@ And Check the Main Method.
 ```
 //FirstTest: Is For Google Home Page Test. 
 //1. Formulate A Base Test URL
-
+    final  String siteURL = "https://www.google.com/";
+        
 //2. Locate A Web Driver BY Locating the path
-
+        
+ // final String driverPath ="driver/chromedriver.exe";
+final String driverPath = "C:\\Users\\nayak\\Desktop\\simplilearn\\Phase_5_FSD\\FSD-5 WorkSpace-Practice-Projects\\SeleniumChromeDriverTestOne\\driver\\chromedriver.exe";
+        
+        
 //3. Set Selenium System Properties.
-
-//4. Instsntiate Selenium Web Driver . That means Create an object of the web driver.
-
+        
+System.setProperty("webdriver.chrome.driver",driverPath);
+		
+//4. Instantiate Selenium Web Driver . That means Create an object of the web driver.
+        
+ WebDriver driver = new ChromeDriver();
+         
 //5. Launch Browser
+         
+     driver.get(siteURL);
 
 //6. Perform Test Evaluation 
-
+         
+        String expectedTitle = "Google";
+        
+        if (expectedTitle.equals(driver.getTitle())) {
+       	 System.out.println("Test is Passed !");
+        }else {
+       	 System.out.println("Test is Failed !");
+        }
+        
 //7. Close Driver 
- driver.quit();
+     driver.close();
 
 
 ```
