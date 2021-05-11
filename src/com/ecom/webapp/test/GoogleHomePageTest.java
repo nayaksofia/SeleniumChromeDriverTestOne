@@ -22,7 +22,6 @@ public class GoogleHomePageTest {
         
              WebDriver driver = new ChromeDriver();
          
-   
          
 		//5. Launch Browser
          
