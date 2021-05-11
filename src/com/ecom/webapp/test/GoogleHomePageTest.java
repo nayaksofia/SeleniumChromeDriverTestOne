@@ -29,13 +29,16 @@ public class GoogleHomePageTest {
 
 		//6. Perform Test Evaluation 
          
-        String expectedTitle = "Google";
+        String expectedTitle = "Googleeeeeeeeeeeeeeeeeeeeeeee";
         
         if (expectedTitle.equals(driver.getTitle())) {
        	 System.out.println("Test is Passed !");
         }else {
        	 System.out.println("Test is Failed !");
         }
+        
+        System.out.println("Actual :: " + driver.getTitle());
+        System.out.println("Expected :: " + expectedTitle);
         
 		//7. Close Driver 
          driver.close();
